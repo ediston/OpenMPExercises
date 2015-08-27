@@ -8,9 +8,9 @@ export OMP_NUM_THREADS = 4
 #include<omp.h>
 
 int main(){
-  #pragma omp parallel
+  #pragma omp parallel // <---- says give me default # of threads
   {
-    int ID  = 0;
+    int ID  = omp_get_thread_num(); // get the thread I am running on
     printf("hello(%d)\n", ID);
     printf("world(%d)\n", ID);
   }
