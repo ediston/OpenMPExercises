@@ -1,3 +1,9 @@
+/*
+gcc -fopenmp 1B.c  
+export OMP_NUM_THREADS = 4
+./a.out
+*/
+
 #include<stdio.h>
 #include<omp.h>
 
